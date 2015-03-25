@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
 
+  
+  match '/admins/sign_up', to: 'stat_pages#signup', via: 'get'
+  
+  devise_for :admins
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root 'stat_pages#home'
+
+  resources :albums
+
+  resources :pictures
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

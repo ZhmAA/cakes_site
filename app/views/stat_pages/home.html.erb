@@ -22,27 +22,43 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	<script>
+		$(document).ready(function(){
+
+	 
+
+	        var $nav = $("#nav");
+	 
+	        $(window).scroll(function(){
+
+	            if ( $(this).scrollTop() > 700 && $nav.hasClass("default") ){
+
+	                $nav.removeClass("default").addClass("fixed");
+
+	            } else if($(this).scrollTop() <= 700 && $nav.hasClass("fixed")) {
+
+	                $nav.removeClass("fixed").addClass("default");
+
+	            }
+
+	        });//scroll
+
+	    });
+	</script>
+
 	</head>
 	<body>
 
 		<!-- Header -->
-			<section id="header" class="dark">
-				<header>
-					<h1>Welcome to Tessellate</h1>
-					<p>A free responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-				</header>
-				<footer>
-					<a href="#first" class="button scrolly">Proceed to second phase</a>
-				</footer>
-			</section>
+			<%= render 'shared/header' %>
 			
 		<!-- First -->
 			<section id="first" class="main">
 				<header>
 					<div class="container">
-						<h2>Tessellate is a free responsive site template</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+						<h2>Мы предлагаем услуги/изготовление/</h2>
+						<p>Практически каждый праздник не обходится без вкусного и красивого торта....<br />
+						Практически каждый праздник не обходится без вкусного и красивого торта....</p>
 					</div>
 				</header>
 				<div class="content dark style1 featured">
@@ -52,43 +68,39 @@
 								<section>
 									<span class="feature-icon"><span class="icon fa-clock-o"></span></span>
 									<header>
-										<h3>Gravida</h3>
+										<h3>Преимущества</h3>
 									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. 
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus 
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus.</p>
+									<p>Торты изготавливаются из натуральных, самых качественных и свежих продуктов, без применения консервантов, порошков, растительных сливок, маргарина. Если Вы заказываете торт с йогуртовым ...</p>
 								</section>
 							</div>
 							<div class="4u">
 								<section>
 									<span class="feature-icon"><span class="icon fa-bolt"></span></span>
 									<header>
-										<h3>Vivamus</h3>
+										<h3>Почему именно мы</h3>
 									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. 
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus 
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus.</p>
+									<p>Торты изготавливаются из натуральных, самых качественных и свежих продуктов, без применения консервантов, порошков, растительных сливок, маргарина. Если Вы заказываете торт с йогуртовым ...</p>
 								</section>
 							</div>
 							<div class="4u">
 								<section>
 									<span class="feature-icon"><span class="icon fa-cloud"></span></span>
 									<header>
-										<h3>Accumsan</h3>
+										<h3>Оформление заказа</h3>
 									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. 
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus 
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus.</p>
+									<p>1. Изъявляете желание заказать торт:
+- устно (по телефону)
+- письменно (сообщением в личку)
+2. Указываете дату и примерное время сдачи заказа.
+3. Договариваемся о встрече.
+4. При встрече обсуждаем дизайн будущего торта, его состав, и прочие организационные моменты. Вносите предоплату (100 грн).</p>
 								</section>
 							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
 								<footer>
-									<a href="#second" class="button scrolly">Gravida tempor lacinia</a>
+									<a href="#second" class="button scrolly">Далее / Наши работы</a>
 								</footer>
 							</div>
 						</div>
@@ -100,9 +112,9 @@
 			<section id="second" class="main">
 				<header>
 					<div class="container">
-						<h2>Euismod sed feugiat lorem tempus magna</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+						<h2>В нашей галерее вы можете...</h2>
+						<p>Представляем вам разнообразные виды начинок, среди которых вы можете выбрать подходящую именно для вашего торта<br />
+						Представляем вам разнообразные виды начинок, среди которых вы можете выбрать подходящую именно для вашего торта</p>
 					</div>
 				</header>
 				<div class="content dark style2">
@@ -110,33 +122,34 @@
 						<div class="row">
 							<div class="4u">
 								<section>
-									<h3>Augue vivamus sed ipsum commodo lorem dolor</h3>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-									tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante 
-									vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus 
-									augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis 
-									lorem ipsum dolor placerat magna tempus feugiat.</p>
-									<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-									accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-									euismod lorem ipsum dolor.</p>
+									<h3>Наши работы</h3>
+									<p>В галерее вы можете ознакомится с нашими работами для разных событий, будь то свадьба, день рождение, или корпоратив.
+									В галерее вы можете ознакомится с нашими работами для разных событий, будь то свадьба, день рождение, или корпоратив.
+									</p>
+									<p>В галерее вы можете ознакомится с нашими работами для разных событий, будь то свадьба, день рождение, или корпоратив.</p>
 									<footer>
-										<a href="#third" class="button scrolly">Accumsan nisi tempor</a>
+										<a href="#third" class="button scrolly">Далее / О нас</a>
 									</footer>
 								</section>
 							</div>
 							<div class="8u">
+																
 								<div class="row no-collapse">
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a></div>
+									<% @albums.each do |album| %>
+										<div class="6u">
+											<a href="#" class="image fit">
+												<% if album.image_stored? %>
+    												<%= image_tag album.image.url %>
+												<% else %>
+    												<%= image_tag 'no_image.png' %>
+												<% end %>
+											</a>
+											<%= link_to 'Show', album %>
+										</div>
+									<% end %>
 								</div>
-								<div class="row no-collapse">
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-								</div>
-								<div class="row no-collapse">
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-									<div class="6u"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
-								</div>
+								
+								
 							</div>
 						</div>
 					</div>
@@ -147,9 +160,9 @@
 			<section id="third" class="main">
 				<header>
 					<div class="container">
-						<h2>Ornare varius lorem ipsum ante lectus</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
+						<h2>Оформить заказ очень просто</h2>
+						<p>Воспользуйтесь контактной формой, или же позвоните по телефонам<br />
+						Воспользуйтесь контактной формой, или же позвоните по телефона</p>
 					</div>
 				</header>
 				<div class="content dark style3">
@@ -157,43 +170,19 @@
 						<span class="image featured"><img src="images/pic07.jpg" alt="" /></span>
 						<div class="row">
 							<div class="4u">
-								<h3>Diam vivamus turpis lorem sodales lectus ornare</h3>
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam 
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante 
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus 
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis 
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore 
-								euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu eget ornare varius 
-								gravida dolore euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu 
-								eget ornare et magna.</p>
+								<h3>О нас</h3>
+								<p>текст о нас текст о нас текст о нас</p>
+								<p>текст о настекст о настекст о настекст о нас</p>
 							</div>
 							<div class="4u">
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam 
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante 
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus 
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis 
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore 
-								euismod lorem ipsum dolor sit amet consequat eget ornare varius gravida euismod.
-								Gravida dis lorem ipsum dolor placerat magna tempus feugiat magna tempus lorem.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia 
-								accumsan vivamus augue cubilia.</p>
+								<p>текст о настекст о настекст о нас</p>
+								<p>текст о настекст о настекст о настекст о нас</p>
 							</div>
 							<div class="4u">
-								<p>Placerat lectus ante vel nunc euismod est turpis sodales. Diam tempor dui 
-								lacinia eget ornare varius gravida. Gravida dis placerat lectus ante vel nunc 
-								euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus augue 
-								cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis 
-								lorem ipsum dolor placerat magna tempus feugiat. Lectus ante vel nunc euismod 
-								est turpis sodales. Diam tempor dui lacinia dolore.</p>
-								<p>Accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida 
-								dolore euismod lorem ipsum dolor sit amet conseismod lorem ipsum dolor sit amet 
-								consequat lorem ipsum consequat feugiat sed tempus euismod feugiat veroeros.</p>
+								<p>текст о настекст о настекст о настекст о нас</p>
+								<p>текст о настекст о настекст о настекст о нас</p>
 								<footer>
-									<a href="#fourth" class="button scrolly">Ipsum ornare lorem dolor</a>
+									<a href="#fourth" class="button scrolly">Далее / Контакты</a>
 								</footer>
 							</div>
 						</div>
@@ -372,54 +361,5 @@
 				</div>
 			</section>
 		-->
-		
-		<!-- Fourth -->
-			<section id="fourth" class="main">
-				<header>
-					<div class="container">
-						<h2>Sed feugiat ipsum consequat</h2>
-						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
-						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
-					</div>
-				</header>
-				<div class="content style4 featured">
-					<div class="container 75%">
-						<form method="post" action="#">
-							<div class="row 50%">
-								<div class="6u"><input type="text" placeholder="Name" /></div>
-								<div class="6u"><input type="text" placeholder="Email" /></div>
-							</div>
-							<div class="row 50%">
-								<div class="12u"><textarea name="message" placeholder="Message"></textarea></div>
-							</div>
-							<div class="row">
-								<div class="12u">
-									<ul class="actions">
-										<li><input type="submit" class="button" value="Send Message" /></li>
-										<li><input type="reset" class="button alt" value="Clear Form" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-			
 		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-				</ul>
-				<div class="copyright">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</section>
-
-	</body>
-</html>
+		<%= render 'shared/footer' %>

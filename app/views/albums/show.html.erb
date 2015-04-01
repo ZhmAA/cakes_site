@@ -1,24 +1,58 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+		<!-- Header -->
+<%= render 'shared/header' %>
 
-<% @pictures.in_groups_of(3).each do |pictures| %>
+
+
+<!-- Second -->
+			<section id="second" class="main">
+				<header>
+					<div class="container">
+						<h2>Название альбома</h2>
+						<p>Описание альбома</p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							
+								<!--<div class="row no-collapse">
+									<div class="6u"><a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
+								</div>
+								<div class="row no-collapse">
+									<div class="6u"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>-->
+
+
+<div class="6u">
+	<% @pictures.in_groups_of(3).each do |pictures| %>
 	<% pictures.select! {|x| !x.nil?} %>
-	<div>
-		<% pictures.each do |picture| %>
-		<div>
-			<p><%= picture.pic_name %></p>
-			<p><%= picture.pic_description %></p>
-			
-<p><% if picture.picimage_stored? %>
-    <%= image_tag picture.picimage.url, height: 200 %>
+	<% pictures.each do |picture| %>
+	<a href="#" class="image fit"><% if picture.picimage_stored? %>
+    <%= image_tag picture.picimage.url %>
 <% else %>
-    <%= image_tag 'no_image.png', height: 200 %>
-<% end %></p>
+    <%= image_tag 'no_image.png' %>
+<% end %></a>
 
-		</div>
-<% end %>
-
-	</div>
+ <p><%= picture.pic_name %></p>
+  <p><%= picture.pic_description %></p>
 
 <% end %>
+<% end %>
+</div>
 
+									
+								<!--</div>-->
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+
+		<%= render 'shared/footer' %>

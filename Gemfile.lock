@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 3b27b4081926a4a7e200ede45728b92a3f096cf1
+  revision: 9d84288398fa152a31009fa18abea2e4dc17ac38
   specs:
     rails_admin (0.6.7)
       builder (~> 3.1)
@@ -46,7 +46,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    addressable (2.3.7)
+    addressable (2.3.8)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.10-x86-mingw32)
     builder (3.2.2)

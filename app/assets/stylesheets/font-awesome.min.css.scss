@@ -16,9 +16,7 @@
  
  
  
-	.fa-spin { -webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear }
- 
-	.fa-pulse { -webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8) }
+	
  
 	.fa-rotate-270 {
 		filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
@@ -1170,10 +1168,7 @@
 	font-style:normal }
  
  
-@-webkit-keyframes fa-spin { 0% }
- 
- 
-@keyframes fa-spin { 0% }
+
  
  
  

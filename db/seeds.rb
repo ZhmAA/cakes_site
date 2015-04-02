@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+admin_main = Admin.create(email: 'name@name.com', password: '123456789', password_confirmation: '123456789')
 
 first11 = Album.create(name: 'first', description: 'test', image: '/images/pic01.jpg')
 second22 = Album.create(name: 'second', description: 'test', image: '/images/pic02.jpg')

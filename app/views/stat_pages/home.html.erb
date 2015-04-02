@@ -23,35 +23,48 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	<script>
-		$(document).ready(function(){
+        $(document).ready(function(){
 
-	 
+     
 
-	        var $nav = $("#nav");
-	 
-	        $(window).scroll(function(){
+            var $nav = $("#nav");
+     
+            $(window).scroll(function(){
 
-	            if ( $(this).scrollTop() > 700 && $nav.hasClass("default") ){
+                if ( $(this).scrollTop() > 700 && $nav.hasClass("default") ){
 
-	                $nav.removeClass("default").addClass("fixed");
+                    $nav.removeClass("default").addClass("fixed");
 
-	            } else if($(this).scrollTop() <= 700 && $nav.hasClass("fixed")) {
+                } else if($(this).scrollTop() <= 700 && $nav.hasClass("fixed")) {
 
-	                $nav.removeClass("fixed").addClass("default");
+                    $nav.removeClass("fixed").addClass("default");
 
-	            }
+                }
 
-	        });//scroll
+            });//scroll
 
-	    });
-	</script>
+        });
+    </script>
 
-	</head>
-	<body>
+    </head>
+    <body>
 
 		<!-- Header -->
 			<%= render 'shared/header' %>
 			
+
+			<div>
+                    <nav id="nav" class="default">
+                        <ul>
+                            <li><a href="#first">Мы предлагаем</a></li>
+                            <li><a href="#second">Наши работы</a></li>
+                            <li><a href="#third">О нас</a></li>
+                            <li><a href="#fourth">Контакты</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+                
 		<!-- First -->
 			<section id="first" class="main">
 				<header>

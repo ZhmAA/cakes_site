@@ -1,0 +1,25 @@
+/ Banner
+%section#header.dark
+    %header
+        %ul.bxslider
+            %li
+                %img{:src => "/images/header.jpg"}/
+            %li
+                %img{:src => "/images/header.jpg"}/
+            %li
+                %img{:src => "/images/header.jpg"}/
+        %h1 Cakes App
+        %p Добро пожаловать на наш сайт 
+        = link_to 'Лого'
+/ Nav
+%nav#nav.default
+    %ul
+        %li= link_to 'Лого', '#'
+        %li= link_to 'Мы предлагаем', root_path(anchor: 'services')
+        %li= link_to 'Наши работы', root_path(anchor: 'gallery')
+        %li= link_to 'О нас', root_path(anchor: 'about_us')
+        %li= link_to 'Контакты', root_path(anchor: 'contacs')
+
+
+
+

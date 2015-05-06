@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'stat_pages#home'
 
+  get '/contacts' => 'stat_pages#contacts'
+
   resources :albums
 
   resources :pictures

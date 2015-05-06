@@ -828,6 +828,19 @@
 		text-align: center;
 		color: #fff;
 	}
+
+	#mini_header
+	{
+		position: relative;
+		margin: 0;
+		background-image: url('images/overlay.png'), url('../images/header.jpg');
+		background-size:			auto,								cover;
+		background-position:		top left,							center center;
+		background-repeat:			repeat,								no-repeat;
+		padding: 7em 0 7em 0;
+		text-align: center;
+		color: #fff;
+	}
 	
 		#header header
 		{
@@ -894,7 +907,7 @@
     	outline: none;
 }
 
-	nav li a.selected {
+	nav li.active a {
     	color: #fff;
     	background: #b1bf92;
    		text-decoration: none;

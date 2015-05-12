@@ -287,6 +287,21 @@
 					width: auto;
 				}
 
+
+	.image_box {
+
+		width: 33%; 
+		clear: none; 
+		margin-left: 0;
+	}
+
+	.image_box p {
+
+		text-align: center;
+		margin: 0px 10px 0px -10px;
+
+	}
+
 	/* List */
 
 		ul.default
@@ -876,6 +891,9 @@
     	display: block;
     	line-height: 40px;
     	width: 100%;
+    	position: fixed;
+	    top:0; left:0;
+		z-index: 1000;
 
 	}
 
@@ -914,18 +932,7 @@
     	outline: none;
 }
 
-	#nav.default {
-	    width: 100%;
-
-	}
-
-	#nav.fixed {
-	    position: fixed;
-	    top:0; left:0;
-	    width: 100%;
-	    z-index: 1000;
-
-	}
+	
 
 /** firefox remove outline **/
 nav ul li a:focus {outline:none;}

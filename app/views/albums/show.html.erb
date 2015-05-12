@@ -18,11 +18,11 @@
 							<% pictures.select! {|x| !x.nil?} %>
 								<div class="row no-collapse">
 									<% pictures.each do |picture| %>
-										<div class="6u">
+										<div class="image_box">
 											
 												<% if picture.picimage_stored? %>
     													<%= link_to picture.picimage.remote_url, class: 'fancybox', rel: 'gallery', title: picture.pic_name do %> 
-    													<%=	image_tag picture.picimage.url, :class => 'image fit', alt: 'Photo' %>
+    													<%=	image_tag picture.picimage.url, :class => 'image fit', alt: picture.pic_name %>
     												<% end %>
 												<% else %>
     												<%= image_tag 'no_image.png' %>

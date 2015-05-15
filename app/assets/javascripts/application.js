@@ -17,23 +17,23 @@
 
 //= require fancybox
 
-
-    $('a[href^="#"]').click(function () {
-      elementClick = $(this).attr("href");
-      destination = $(elementClick).offset().top;
-      if($.browser.safari){
-        $('body').animate( { scrollTop: destination }, 500 );
-      }else{
-        $('html').animate( { scrollTop: destination }, 500 );
-      }
-      return false;
-    });
-
+$(document).ready(function(){
+      $('#nav').on('click', 'a', function (event) {
+          //отменяем стандартную обработку нажатия по ссылке
+          event.preventDefault();
+          //забираем идентификатор бока с атрибута href
+          var id  = $(this).attr('href'),
+          //узнаем высоту от начала страницы до блока на который ссылается якорь
+              top = $(id).offset().top;
+          //анимируем переход на расстояние - top за 1500 мс
+          $('body,html').animate({scrollTop: top}, 1500);
+      });
+  });
 
 
 //fancybox
 $(document).ready(function() {
-$(".fancybox").fancybox({ // initialize fancybox on all pages where it is present
+$(".fancybox").fancybox({ 
         parent: 'body',
         openEffect  : 'none',
         closeEffect : 'none'

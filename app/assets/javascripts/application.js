@@ -17,6 +17,8 @@
 
 //= require fancybox
 
+
+//anchor scroll
 $(document).ready(function(){
       $('#nav').on('click', 'a', function (event) {
           //отменяем стандартную обработку нажатия по ссылке

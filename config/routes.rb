@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
 
-  
   match '/admins/sign_up', to: 'stat_pages#signup', via: 'get'
   
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  resources "contacts", only: [:new, :create]
+
   root 'stat_pages#home'
 
-  get '/contacts' => 'stat_pages#contacts'
+  get '/ourcontacts' => 'stat_pages#ourcontacts'
 
   resources :albums
 

@@ -2,9 +2,10 @@ class StatPagesController < ApplicationController
 
 	def home
 		@albums = Album.all
+		@contact = Contact.new
 	end
 
-	def contacts
+	def ourcontacts
 		
 	end
 	

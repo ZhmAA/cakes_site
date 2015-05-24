@@ -1,0 +1,32 @@
+			<section id="contacs" class="main">
+				<header>
+					<div class="container">
+						<h2>Форма обратной связи</h2>
+						<h3><a href="/contacts">Наши контакты</a></h3>
+						<p>Если у вас возникли вопросы, или же вы хотите оформить заказ, то заполните данную форму и мы свяжемся с вами в течении короткого периода времени
+					</div>
+				</header>
+				<div class="content style4 featured">
+					<div class="container 75%">
+						
+							<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+							<div class="row 50%">
+								<div class="6u"><%= f.input :name, :required => true %></div>
+								<div class="6u"><%= f.input :email, :required => true %></div>
+							</div>
+							<div class="row 50%">
+								<div class="12u"><%= f.input :message, :as => :text, :required => true %></textarea></div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><%= f.button :submit, 'Send message', :class=> "btn btn-primary" %></li>
+										<li><input type="reset" class="button alt" value="Clear Form" /></li>
+									</ul>
+								</div>
+							</div>
+							<% end %>
+						
+					</div>
+				</div>
+			</section>

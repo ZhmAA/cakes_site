@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
   root 'stat_pages#home'
-
-  get '/ourcontacts' => 'stat_pages#ourcontacts'
 
   resources :albums
 

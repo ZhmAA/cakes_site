@@ -5,10 +5,6 @@ class StatPagesController < ApplicationController
 		@contact = Contact.new
 	end
 
-	def ourcontacts
-		
-	end
-	
 	def signup
 		redirect_to '/404'
 	end

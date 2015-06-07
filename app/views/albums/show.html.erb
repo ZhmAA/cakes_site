@@ -35,6 +35,12 @@
 								</div>
 							<% end %>
 						
+						<% if @pictures.next_page %>
+							<div id="load_more_pictures">
+    							<%= button_to 'More pics', {action: "show", new_req: true }, method: :get, remote: true, class: "btn btn-primary btn-large" %> 
+							</div>
+						<% end %>
+
 						<a href="">Загрузить еще</a>
 								
 								<!--</div>-->

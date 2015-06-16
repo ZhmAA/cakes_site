@@ -11,7 +11,7 @@ class AlbumsController < ApplicationController
   def show
   	@album = Album.find(params[:id])
   	@pictures = @album.pictures
-    @pictures = Picture.paginate(page: session[:page], :per_page => 5)
+    @pictures = Picture.where(:album_id => params[:id]).paginate(:page => params[:page], :per_page => 3)
     respond_with @pictures
     
   end

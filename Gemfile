@@ -10,6 +10,7 @@ end
 
 #add images from cpmputer
 gem 'dragonfly', "~>1.0.7"
+gem 'dragonfly-s3_data_store'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

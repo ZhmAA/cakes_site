@@ -1,9 +1,5 @@
 <script>
-$('#with_button').hide()
-$('#load_more_pictures').show()
-$('#load_more_pictures form').after('<button class="btn btn-primary btn-large btn-clone disabled" style="display: none;">More pics</button>')
-$('#load_more_pictures').click ->
-$('#load_more_pictures').find('form').hide().siblings('button').show()
+
 
 $('.pictures').append('<%= j render @pictures %>').siblings('#load_more_pictures').find("button").hide().siblings('form').show();
 <% unless @pictures.next_page %>
@@ -41,13 +37,13 @@ $('#load_more_pictures').remove();
 												<% end %>
 											
 											<p><%= picture.pic_name %></p>
-  											<p><%= picture.pic_description %></p>
+  											<!--<p><%= picture.pic_description %></p>-->
 										</div>
 									<% end %>
 								</div>
 							<% end %>
 						
-						<% if @pictures.next_page %>
+						<!--<% if @pictures.next_page %>
 							<div id="load_more_pictures">
     							<%= button_to 'More pics', {action: "show", new_req: true }, method: :get, remote: true, class: "btn btn-primary btn-large" %> 
 							</div>
@@ -55,7 +51,7 @@ $('#load_more_pictures').remove();
 
 						<a href="">Загрузить еще</a>
 								
-								<!--</div>-->
+								</div>-->
 							
 					</div>
 				</div>

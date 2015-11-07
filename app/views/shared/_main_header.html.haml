@@ -1,14 +1,17 @@
-/ Nav
-%nav#nav
-    %ul
-        %li= link_to 'Лого', '#header'
-        %li= link_to 'Наши работы', root_path(anchor: 'gallery')
-        %li= link_to 'О нас', root_path(anchor: 'about_us')
-        %li= link_to 'Контакты', root_path(anchor: 'contacts')
 / Banner
 %section#header.dark
+    %img#logo(src="/images/logo.png")
+    / Nav
+    %nav#nav
+        %ul
+            %li= link_to 'Наши работы', root_path(anchor: 'gallery')
+            %li= link_to 'Оформить заказ', root_path(anchor: 'about_us')
+            %li= link_to 'Logo', root_path
+            %li= link_to 'Контакты', root_path(anchor: 'contacts')
+            %li= link_to 'Контакты', root_path(anchor: 'contacts')
     %header
-        %h1 Cakes App
-        %p Добро пожаловать на наш сайт 
-        = link_to 'Лого'
+        %div.header_welcome
+            %img(src="/images/welcome_flags.png")
+        %div.header_girl
+            %img(src="/images/girl.png")
         

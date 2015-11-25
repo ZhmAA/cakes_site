@@ -8,10 +8,16 @@
             %li= link_to 'Оформить заказ', root_path(anchor: 'about_us')
             %li= link_to 'Logo', root_path
             %li= link_to 'Контакты', root_path(anchor: 'contacts')
-            %li= link_to 'Контакты', root_path(anchor: 'contacts')
+            %li#nav_icons
+                %a{:href => "http://vk.com"}
+                    %img{:alt => "vk", :src => "images/soc_icons/icon_vk.png"}/
+                %a{:href => "http://vk.com"}
+                    %img{:alt => "fb", :src => "images/soc_icons/icon_fb.png"}/
+                %a{:href => "http://vk.com"}
+                    %img{:alt => "ok", :src => "images/soc_icons/icon_ok.png"}/
     %header
         %div.header_welcome
-            %img(src="/images/welcome_flags.png")
+            %img{:src =>"/images/welcome_flags.png"}
         %div.header_girl
-            %img(src="/images/girl.png")
+            %img{:src => "/images/girl.png"}
         

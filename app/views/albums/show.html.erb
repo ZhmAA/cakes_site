@@ -1,12 +1,4 @@
-<script>
 
-
-$('.pictures').append('<%= j render @pictures %>').siblings('#load_more_pictures').find("button").hide().siblings('form').show();
-<% unless @pictures.next_page %>
-$('#load_more_pictures').remove();
-<% end %>
-
-</script>
 <!-- Second -->
 		<section id="second" class="main">
 			<header>

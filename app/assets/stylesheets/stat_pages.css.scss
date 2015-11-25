@@ -177,10 +177,13 @@ header {
         -moz-transition: right 0.5s ease-in-out;
         -o-transition: right 0.5s ease-in-out;
         transition: right 0.5s ease-in-out; }
+    .nav-holder .nav .nav-wrapper:before, .nav-holder .nav .nav-wrapper:after {
+      content: '';
+      display: table; }
+    .nav-holder .nav .nav-wrapper:after {
+      clear: both; }
     .nav-holder .nav .main-nav {
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: middle; }
+      float: left; }
       .nav-holder .nav .main-nav li {
         float: left; }
         .nav-holder .nav .main-nav li:first-child, .nav-holder .nav .main-nav li:last-child {
@@ -525,6 +528,7 @@ footer {
       -o-transition: none;
       transition: none; }
   .nav-holder .nav .main-nav {
+    float: none;
     display: block; }
     .nav-holder .nav .main-nav li {
       float: none;

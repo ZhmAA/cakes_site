@@ -1,0 +1,23 @@
+/ Header
+%header
+  .logo
+    %a{:href => "#"}
+      %img{:alt => "Logo", :src => "images/logo.png"}/
+  .nav-holder
+    %nav.nav
+      .container
+        .nav-wrapper
+          %ul.main-nav
+            %li= link_to 'Наши работы', root_path(anchor: 'our_works')
+            %li= link_to 'Оформить заказ', root_path(anchor: 'zakaz')
+            %li= link_to 'Контакты', root_path(anchor: 'contacts')
+          %ul.soc-nav
+            %li
+              %a{:href => "http://vk.com/club53389244"}
+                %i.icon-facebook-square
+            %li
+              %a{:href => "http://ok.ru/tortkharkov"}
+                %i.icon-odnoklassniki-square
+            %li
+              %a{:href => "https://www.facebook.com/yanamdontsova"}
+                %i.icon-vkontakte

@@ -1,113 +1,84 @@
 <!-- Main -->
-		<div class="main">
-			<div class="container">
-				<section class="welcome">
-					<div class="welcome__image">
-						<img src="images/welcome.png" alt="Добро пожаловать с студию Яны Мартыновой">
-					</div>
-					<div class="title">
-						<h2>Сладкое искусство</h2>
-					</div>
-					<div class="benefits">
-						<ul class="benefits__list">
-							<li><a href="#"><img src="images/icon-cake-1.png" alt="Изготовление тортов"></a></li>
-							<li><a href="#"><img src="images/icon-cake-2.png" alt="Изготовление пирожных"></a></li>
-							<li><a href="#"><img src="images/icon-cake-3.png" alt="Изготовление сладостей"></a></li>
-						</ul>
-					</div>
-				</section>
-				<section class="our-works">
-					<div class="title">
-						<h2>Наши работы</h2>
-					</div>
-					<div class="frame-block-holder frame-block-holder--full">
-						<div class="frame-decor">
-							<img src="images/frame-top.png" alt="top-frame">
-						</div>
-						<div class="frame-block frame-block--full">
-							<div class="frame-block__text">
-								Цену на торт вычисляю индивидуально в зависимости от начинки и сложности украшени   й, от 160 грн/кг. 
-								Торт без мастики от 200 грн/кг.
-								Капкейки - от 20-50 грн\шт.
-								Расписное Печенье от 10 грн\шт (около 6–8 см), пряники от 20 грн\шт. Печенье 11 см около 30грн\ шт. Упаковка каждого печенья в пакетик с бантиком +1 грн за шт.
-								НАЧИНКИ тортов смотрите здесь https://vk.com/album-53389244_173924072<br>
-								<br>
-								Заказы принимаются не позднее 4 дней до торжества .Заказы принимаются не позднее 4 дней до торжества Заказы принимаются не позднее 4 дней до торжества (при условии, что дата не будет уже занята). Срочные заказы оговариваются отдельно и подлежат дополнительной оплате.
-							</div>
-							<ul class="frame-block__images">
-								<li>
-									<a href="#">Cake 1</a>
-									<div class="image-hover">			
-										<i class="icon-camera"></i>
-									</div>
-									<img src="images/cake-photo-1.jpg" alt="Тортик 1">
-								</li>
-								<li>
-									<a href="#">Cake 2</a>
-									<div class="image-hover">			
-										<i class="icon-camera"></i>
-									</div>
-									<img src="images/cake-photo-2.jpg" alt="Тортик 1">
-								</li>
-								<li>
-									<a href="#">Cake 3</a>
-									<div class="image-hover">			
-										<i class="icon-camera"></i>
-									</div>
-									<img src="images/cake-photo-3.jpg" alt="Тортик 1">
-								</li>
-								<li>
-									<a href="#">Cake 4</a>
-									<div class="image-hover">			
-										<i class="icon-camera"></i>
-									</div>
-									<img src="images/cake-photo-4.jpg" alt="Тортик 1">
-								</li>
-								<li>
-									<a href="#">Cake 5</a>
-									<div class="image-hover">			
-										<i class="icon-camera"></i>
-									</div>
-									<img src="images/cake-photo-5.jpg" alt="Тортик 1">
-								</li>
-								<li>
-									<a href="#">Cake 6</a>
-									<div class="image-hover">			
-										<i class="icon-camera"></i>
-									</div>
-									<img src="images/cake-photo-6.jpg" alt="Тортик 1">
-								</li>
-							</ul>
-						</div>
-						<div class="frame-decor">
-							<img src="images/frame-bottom.png" alt="bottom-frame">
-						</div>
-					</div>
-				</section>
-				<section class="order">
-					<div class="title">
-						<h2>Оформить заказ</h2>
-					</div>
-					<div class="order-content">
-						<div class="frame-block-holder frame-block-holder--half">
-							<div class="frame-decor">
-								<img src="images/frame-h-top.png" alt="top-frame">
-							</div>
-							<div class="frame-block frame-block--half">
-							Цену на торт вычисляю индивидуально в зависимости от начинки и сложности украшени   й, от 160 грн/кг. 
-							Торт без мастики от 200 грн/кг.
-							Капкейки - от 20-50 грн\шт.
-							Расписное Печенье от 10 грн\шт (около 6–8 см), пряники от 20 грн\шт. Печенье 11 см около 30грн\ шт. Упаковка каждого печенья в пакетик с бантиком +1 грн за шт.
-							</div>
-							<div class="frame-decor">
-								<img src="images/frame-h-bottom.png" alt="bottom-frame">
-							</div>
-						</div>
-						<div class="image-content">
-							<img src="images/order-bg.png" alt="Закажите вкусняшку">
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-<!-- Footer -->		
+    <div class="main">
+      <div class="container">
+        <section class="welcome">
+          <div class="welcome__image">
+            <img src="images/welcome.png" alt="Добро пожаловать с студию Яны Мартыновой">
+          </div>
+          <div class="title">
+            <h2>Сладкое искусство</h2>
+          </div>
+          <div class="benefits">
+            <ul class="benefits__list">
+              <li><%= link_to image_tag("/images/icon-cake-1.png"), pies_path %></li>
+              <li><%= link_to image_tag("/images/icon-cake-2.png"), cakes_path %></li>
+              <li><%= link_to image_tag("/images/icon-cake-3.png"), candies_path %></li>
+            </ul>
+          </div>
+        </section>
+        <section class="our-works">
+          <div class="title" id="our_works">
+            <h2>Наши работы</h2>
+          </div>
+          <div class="frame-block-holder frame-block-holder--full">
+            <div class="frame-decor">
+              <img src="images/frame-top.png" alt="top-frame">
+            </div>
+            <div class="frame-block frame-block--full">
+              <div class="frame-block__text">
+                Цену на торт вычисляю индивидуально в зависимости от начинки и сложности украшени   й, от 160 грн/кг. 
+                Торт без мастики от 200 грн/кг.
+                Капкейки - от 20-50 грн\шт.
+                Расписное Печенье от 10 грн\шт (около 6–8 см), пряники от 20 грн\шт. Печенье 11 см около 30грн\ шт. Упаковка каждого печенья в пакетик с бантиком +1 грн за шт.
+                НАЧИНКИ тортов смотрите здесь https://vk.com/album-53389244_173924072<br>
+                <br>
+                Заказы принимаются не позднее 4 дней до торжества .Заказы принимаются не позднее 4 дней до торжества Заказы принимаются не позднее 4 дней до торжества (при условии, что дата не будет уже занята). Срочные заказы оговариваются отдельно и подлежат дополнительной оплате.
+              </div>
+              <ul class="frame-block__images">
+              	<% @albums.each do |album| %>
+                <li>
+                  <% if album.image_stored? %>
+                    <%= link_to album do %><% end %>
+                      <div class="image-hover">      
+                        <i class="icon-camera"></i>
+                      </div>
+                    <%= image_tag album.image.url %>
+                  <% else %>
+                    <%= image_tag 'no_image.png' %>
+                  <% end %>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="frame-decor">
+              <img src="images/frame-bottom.png" alt="bottom-frame">
+            </div>
+          </div>
+        </section>
+        <section class="order">
+          <div class="title" id="zakaz">
+            <h2>Оформить заказ</h2>
+          </div>
+          <div class="order-content">
+            <div class="frame-block-holder frame-block-holder--half">
+              <div class="frame-decor">
+                <img src="images/frame-h-top.png" alt="top-frame">
+              </div>
+              <div class="frame-block frame-block--half">
+              Цену на торт вычисляю индивидуально в зависимости от начинки и сложности украшени   й, от 160 грн/кг. 
+              Торт без мастики от 200 грн/кг.
+              Капкейки - от 20-50 грн\шт.
+              Расписное Печенье от 10 грн\шт (около 6–8 см), пряники от 20 грн\шт. Печенье 11 см около 30грн\ шт. Упаковка каждого печенья в пакетик с бантиком +1 грн за шт.
+              </div>
+              <div class="frame-decor">
+                <img src="images/frame-h-bottom.png" alt="bottom-frame">
+              </div>
+            </div>
+            <div class="image-content">
+              <img src="images/order-bg.png" alt="Закажите вкусняшку">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+<!-- Footer -->    

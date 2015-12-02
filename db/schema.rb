@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524180837) do
+ActiveRecord::Schema.define(version: 20151127120224) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -35,6 +35,25 @@ ActiveRecord::Schema.define(version: 20150524180837) do
     t.string   "name"
     t.text     "description"
     t.string   "image_uid"
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.string   "keywords"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cakes", force: true do |t|
+    t.string   "cake_name"
+    t.text     "cake_description"
+    t.string   "cakeimage_uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "candies", force: true do |t|
+    t.string   "candy_name"
+    t.text     "candy_description"
+    t.string   "candyimage_uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,6 +68,14 @@ ActiveRecord::Schema.define(version: 20150524180837) do
     t.text     "pic_description"
     t.string   "picimage_uid"
     t.integer  "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pies", force: true do |t|
+    t.string   "pie_name"
+    t.text     "pie_description"
+    t.string   "pieimage_uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

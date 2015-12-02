@@ -11,9 +11,9 @@ class AlbumsController < ApplicationController
   def show
   	@album = Album.find(params[:id])
   	@pictures = @album.pictures
-    @pictures = Picture.where(:album_id => params[:id]).paginate(:page => params[:page], :per_page => 3)
-    respond_with @pictures
-    
+    @meta_title = @album.meta_title
+    @meta_description = @album.meta_description
+    @keywords = @album.keywords
   end
 
   private

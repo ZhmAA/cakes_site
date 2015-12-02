@@ -1,52 +1,37 @@
-
-<!-- Second -->
-		<section id="second" class="main">
-			<header>
-				<div class="container">
-						<h2>Название альбома</h2>
-						<p>Описание альбома</p>
-				</div>
-			</header>
-			<div class="content dark style2">
-				<div class="container">
-					<div class="row">
-							
-								
-						
-
-							<% @pictures.in_groups_of(3).each do |pictures| %>
-							<% pictures.select! {|x| !x.nil?} %>
-								<div class="row no-collapse">
-									<% pictures.each do |picture| %>
-										<div class="image_box">
-											
-												<% if picture.picimage_stored? %>
-    													<%= link_to picture.picimage.remote_url, class: 'fancybox', rel: 'gallery', title: picture.pic_name do %> 
-    													<%=	image_tag picture.picimage.url, :class => 'image fit', alt: picture.pic_name %>
-    												<% end %>
-												<% else %>
-    												<%= image_tag 'no_image.png' %>
-												<% end %>
-											
-											<p><%= picture.pic_name %></p>
-  											<!--<p><%= picture.pic_description %></p>-->
-										</div>
-									<% end %>
-								</div>
-							<% end %>
-						
-						<!--<% if @pictures.next_page %>
-							<div id="load_more_pictures">
-    							<%= button_to 'More pics', {action: "show", new_req: true }, method: :get, remote: true, class: "btn btn-primary btn-large" %> 
-							</div>
-						<% end %>
-
-						<a href="">Загрузить еще</a>
-								
-								</div>-->
-							
-					</div>
-				</div>
-			</div>
-		</section>
-
+<!-- Galery -->
+    <div class="main">
+      <div class="container">
+        <section class="gallery">
+          <div class="title">
+            <h2>Наши работы</h2>
+          </div>
+          <div class="frame-block-holder frame-block-holder--full">
+            <div class="frame-decor">
+              <img src="images/frame-top.png" alt="top-frame">
+            </div>
+            <div class="frame-block frame-block--full">
+              <% @pictures.in_groups_of(3).each do |pictures| %>
+              <% pictures.select! {|x| !x.nil?} %>
+              <ul class="frame-block__images">
+              	<% pictures.each do |picture| %>
+                <li>
+                  <% if picture.picimage_stored? %>
+                    <%= link_to picture.picimage.remote_url, class: 'fancybox', rel: 'gallery', title: picture.pic_name do %><% end %>
+                    <%=	image_tag picture.picimage.url, :class => 'image fit', alt: picture.pic_name %>
+                  <% else %>
+                    <%= image_tag 'no_image.png' %>
+                  <% end %>
+                  <!--<p><%= picture.pic_name %></p>-->
+                  <!--<p><%= picture.pic_description %></p>-->
+                </li>
+                <% end %>
+              </ul>
+              <% end %>
+            </div>
+            <div class="frame-decor">
+              <img src="images/frame-bottom.png" alt="bottom-frame">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>

@@ -4,9 +4,10 @@ ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3'
-end
+#group :development do
+ # gem 'sqlite3'
+#end
+
 
 #add images from cpmputer
 gem 'dragonfly', "~>1.0.7"
@@ -50,8 +51,10 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', '~> 1.2015.2', platforms: [:mingw, :mswin]
 
+gem 'pg'
+
 group :test, :production do
-   gem 'pg', '0.15.1'
+   
    gem 'rails_12factor', '0.0.2'
 
 end
